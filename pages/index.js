@@ -3,9 +3,18 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from '../src/components/Link'
+import NextLink from 'next/link';
+import { IconContext } from "react-icons";
 import styled from 'styled-components';
 
 import Logo from '../src/assets/logo-branco.svg'
+import DanielPic from '../src/assets/daniel-foto.png'
+import GiovannaPic from '../src/assets/giovanna-foto.png'
+import LuannaPic from '../src/assets/luanna-foto.png'
+import JuliaPic from '../src/assets/julia-foto.png'
+import JulyaPic from '../src/assets/julya-foto.png'
+import RodrigoPic from '../src/assets/rodrigo-foto.png'
+import {FaBehance, FaLinkedinIn, FaInstagram, FaEnvelope } from "react-icons/fa";
 
 
 const Landing = styled.section`
@@ -30,7 +39,7 @@ const Landing = styled.section`
   }
 `;
 
-const LandingContent = styled.div`
+Landing.Content = styled.div`
   width: 100%;
   align-self: center !important;
   display: flex;
@@ -48,7 +57,7 @@ const LandingContent = styled.div`
   }
 `;
 
-const LandingTextos = styled.div`
+Landing.Textos = styled.div`
   font-family: 'Nunito', sans-serif;
   color: #f4f4f4;
 
@@ -88,7 +97,7 @@ const Section2 = styled.section`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
+  background-color: #f4f4f4;
   p{
     width: 60%;
     text-align: center;
@@ -96,7 +105,7 @@ const Section2 = styled.section`
   }
 `;
 
-const Section2Content = styled.div`
+Section2.Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,6 +123,90 @@ const Section2Content = styled.div`
   }
 `;
 
+const Section3 = styled.section`
+  padding: 2rem;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f4f4f4;
+
+  h2{
+    color: #15B4C2;
+    font-weight: 700;
+    font-style: italic;
+  }
+`;
+
+const Cards = styled.div`
+  width: 60%;
+  height: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Card = styled.div`
+  width: 232px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.5em 2em 0.5em;
+`;
+
+const CardImg = styled.div`
+  margin-bottom: -10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img{
+    border-radius: 5px;
+    z-index: 15;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+  }
+  div{
+    width: 67px;
+    height: 67px;
+    border-radius: 5px;
+    border: 5px solid #f4f4f4;
+    z-index: 10;
+    background: #f4f4f4;
+  }
+`;
+
+Card.Content = styled.div`
+  z-index: 1;
+  background-color: ${(props)=>props.clr};
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+
+  p{
+    margin: 10px 0 -10px 0;
+    font-family: 'Epilogue', sans-serif;
+    color: #f4f4f4;
+    font-size: 1.3rem;
+  }
+`;
+
+const Icons = styled.div`
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+`;
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -123,27 +216,218 @@ export default function Home() {
 
       <Landing imgUrl='https://cdn.discordapp.com/attachments/315943804567945216/861093391790243860/desenho-01.png'>
         <Image src={Logo} alt='Logo do Conecta as Minas' width={157} height={50}/>
-
-        <LandingContent>
-          <LandingTextos>
+        <Landing.Content>
+          <Landing.Textos>
             <h1>Projeto de conclusão do Curso Técnico de Multimídia da Escola SENAI de Informática no primeiro semestre de 2021</h1>
             <p>Conheça nosso projeto completo no Behance</p>
-          </LandingTextos>
+          </Landing.Textos>
           <Link href={"https://google.com"} target="_blank" grd='
   114.14deg, #740F99 45.88%, #15B4C2 251.47%'>Ir para o projeto</Link>
-        </LandingContent>
+        </Landing.Content>
       </Landing>
 
       <Section2>
-        <Section2Content>
+        <Section2.Content>
           <h2>Quer saber mais?</h2>
           <div>
             <Link href={"https://google.com"} target="_blank" grd='260.64deg, #CC0A9C -29.89%, #740F99 126.84%'>Acesse o protótipo</Link>
             <Link href={"https://google.com"} target="_blank" grd='278.73deg, #FAB319 -43.97%, #CC0A9C 113.91%'>Acesse o projeto</Link>
           </div>
-        </Section2Content>
+        </Section2.Content>
         <p>O conecta as minas é uma plataforma de orientação vocacional, que auxilia meninas a desenvolver confiança e autoconhecimento – através de testes e desafios – com o intuito de recuperar o interesse na tecnologia, que foi perdido durante os anos.</p>
       </Section2>
+
+      <Section3>
+        <h2>"Quem idealizou esse projeto?"</h2>
+        <Cards>
+          <Card>
+            <CardImg>
+              <img src={DanielPic} />
+              <div></div>
+            </CardImg>
+            <Card.Content clr='#740F99'>
+              <p>Daniel Felipe</p>
+              <IconContext.Provider value={{color: '#f4f4f4', size: '1.5rem'}}>
+                <Icons>
+                  <NextLink href="https://www.behance.net/danelfelip" passHref>
+                    <a target="_blank">
+                      <FaBehance/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="https://www.linkedin.com/in/nadfelipe/" passHref>
+                    <a target="_blank">
+                    <FaLinkedinIn/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="https://www.instagram.com/danelfp/" passHref>
+                    <a target="_blank">
+                    <FaInstagram/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="mailto:nadfelipe.s@gmail.com" passHref>
+                    <FaEnvelope/>
+                  </NextLink>
+                </Icons>
+              </IconContext.Provider>
+            </Card.Content>
+          </Card>
+          <Card>
+            <CardImg>
+              <img src={GiovannaPic} />
+              <div></div>
+            </CardImg>
+            <Card.Content clr='#FAB319'>
+              <p>Giovanna Maria</p>
+              <IconContext.Provider value={{color: '#f4f4f4', size: '1.5rem'}}>
+                <Icons>
+                  <NextLink href="https://www.behance.net/giovannamaria6" passHref>
+                    <a target="_blank">
+                      <FaBehance/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="https://www.linkedin.com/in/giovanna-maria-490b091a2/" passHref>
+                    <a target="_blank">
+                    <FaLinkedinIn/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="https://www.instagram.com/gimariaz/" passHref>
+                    <a target="_blank">
+                    <FaInstagram/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="mailto:gibazinha1312@gmail.com" passHref>
+                    <FaEnvelope/>
+                  </NextLink>
+                </Icons>
+              </IconContext.Provider>
+            </Card.Content>
+          </Card>  
+          <Card>
+            <CardImg>
+              <img src={LuannaPic} />
+              <div></div>
+            </CardImg>
+            <Card.Content clr='#CC0A9C'>
+              <p>Luanna Helena</p>
+              <IconContext.Provider value={{color: '#f4f4f4', size: '1.5rem'}}>
+                <Icons>
+                  <NextLink href="https://www.behance.net/luannahelena" passHref>
+                    <a target="_blank">
+                      <FaBehance/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="https://www.linkedin.com/in/luanna-helena-silva-izidoro-8b1b0a1a2/" passHref>
+                    <a target="_blank">
+                    <FaLinkedinIn/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="https://www.instagram.com/_luannahelena/" passHref>
+                    <a target="_blank">
+                    <FaInstagram/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="mailto:helennaluanna@gmail.com" passHref>
+                    <FaEnvelope/>
+                  </NextLink>
+                </Icons>
+              </IconContext.Provider>
+            </Card.Content>
+          </Card>  
+          <Card>
+            <CardImg>
+              <img src={JuliaPic} />
+              <div></div>
+            </CardImg>
+            <Card.Content clr='#740F99'>
+              <p>Julia Fontoura</p>
+              <IconContext.Provider value={{color: '#f4f4f4', size: '1.5rem'}}>
+                <Icons>
+                  <NextLink href="https://www.behance.net/juliafontoura" passHref>
+                    <a target="_blank">
+                      <FaBehance/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="https://www.linkedin.com/in/julia-fontoura/" passHref>
+                    <a target="_blank">
+                    <FaLinkedinIn/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="https://www.instagram.com/juliaafontoura/" passHref>
+                    <a target="_blank">
+                    <FaInstagram/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="mailto:juliafontoura55@gmail.com" passHref>
+                    <FaEnvelope/>
+                  </NextLink>
+                </Icons>
+              </IconContext.Provider>
+            </Card.Content>
+          </Card>  
+          <Card>
+            <CardImg>
+              <img src={JulyaPic} />
+              <div></div>
+            </CardImg>
+            <Card.Content clr='#FAB319'>
+              <p>Julya Neves</p>
+              <IconContext.Provider value={{color: '#f4f4f4', size: '1.5rem'}}>
+                <Icons>
+                  <NextLink href="https://www.behance.net/julyaneves" passHref>
+                    <a target="_blank">
+                      <FaBehance/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="https://www.linkedin.com/in/julya-neves-121b0a1a2/" passHref>
+                    <a target="_blank">
+                    <FaLinkedinIn/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="https://www.instagram.com/juuhon_/" passHref>
+                    <a target="_blank">
+                    <FaInstagram/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="mailto:julya.on54@gmail.com" passHref>
+                    <FaEnvelope/>
+                  </NextLink>
+                </Icons>
+              </IconContext.Provider>
+            </Card.Content>
+          </Card>  
+          <Card>
+            <CardImg>
+              <img src={RodrigoPic} />
+              <div></div>
+            </CardImg>
+            <Card.Content clr='#CC0A9C'>
+              <p>Rodrigo Melhado</p>
+              <IconContext.Provider value={{color: '#f4f4f4', size: '1.5rem'}}>
+                <Icons>
+                  <NextLink href="https://www.behance.net/rod_melhado" passHref>
+                    <a target="_blank">
+                      <FaBehance/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="https://www.linkedin.com/in/rodrigo-melhado/" passHref>
+                    <a target="_blank">
+                    <FaLinkedinIn/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="https://www.instagram.com/rod_melhado/" passHref>
+                    <a target="_blank">
+                    <FaInstagram/>
+                    </a>
+                  </NextLink>
+                  <NextLink href="mailto:rodrigocmon@gmail.com" passHref>
+                    <FaEnvelope/>
+                  </NextLink>
+                </Icons>
+              </IconContext.Provider>
+            </Card.Content>
+          </Card>  
+        </Cards>
+      </Section3>
 
 
 
