@@ -8,6 +8,7 @@ import { IconContext } from "react-icons";
 import styled from 'styled-components';
 
 import Logo from '../src/assets/logo-branco.svg'
+import Maos from '../src/assets/maos.svg'
 import DanielPic from '../src/assets/daniel-foto.png'
 import GiovannaPic from '../src/assets/giovanna-foto.png'
 import LuannaPic from '../src/assets/luanna-foto.png'
@@ -59,7 +60,7 @@ Landing.Content = styled.div`
 
 Landing.Textos = styled.div`
   font-family: 'Nunito', sans-serif;
-  color: #f4f4f4;
+  color: #FCFCFC;
 
   h1{
     display: none;
@@ -97,7 +98,7 @@ const Section2 = styled.section`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: #f4f4f4;
+  background-color: #FCFCFC;
   p{
     width: 60%;
     text-align: center;
@@ -131,7 +132,7 @@ const Section3 = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: #f4f4f4;
+  background-color: #FCFCFC;
 
   h2{
     color: #15B4C2;
@@ -175,9 +176,9 @@ const CardImg = styled.div`
     width: 67px;
     height: 67px;
     border-radius: 5px;
-    border: 5px solid #f4f4f4;
+    border: 5px solid #FCFCFC;
     z-index: 10;
-    background: #f4f4f4;
+    background: #FCFCFC;
   }
 `;
 
@@ -195,7 +196,7 @@ Card.Content = styled.div`
   p{
     margin: 10px 0 -10px 0;
     font-family: 'Epilogue', sans-serif;
-    color: #f4f4f4;
+    color: #FCFCFC;
     font-size: 1.3rem;
   }
 `;
@@ -207,8 +208,27 @@ const Icons = styled.div`
   cursor: pointer;
 `;
 
+
+
+
+const Footer = styled.footer`
+  margin-top: 4em;
+  font-family: 'Epilogue', sans-serif;
+  background-color: #f4f4f4;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  color: #15B4C2;
+  font-weight: 700;
+`;
+
 export default function Home() {
   return (
+  <div>
     <div className={styles.container}>
       <Head>
         <title>Conecta as Minas</title>
@@ -247,7 +267,7 @@ export default function Home() {
             </CardImg>
             <Card.Content clr='#740F99'>
               <p>Daniel Felipe</p>
-              <IconContext.Provider value={{color: '#f4f4f4', size: '1.5rem'}}>
+              <IconContext.Provider value={{color: '#FCFCFC', size: '1.5rem'}}>
                 <Icons>
                   <NextLink href="https://www.behance.net/danelfelip" passHref>
                     <a target="_blank">
@@ -278,7 +298,7 @@ export default function Home() {
             </CardImg>
             <Card.Content clr='#FAB319'>
               <p>Giovanna Maria</p>
-              <IconContext.Provider value={{color: '#f4f4f4', size: '1.5rem'}}>
+              <IconContext.Provider value={{color: '#FCFCFC', size: '1.5rem'}}>
                 <Icons>
                   <NextLink href="https://www.behance.net/giovannamaria6" passHref>
                     <a target="_blank">
@@ -309,7 +329,7 @@ export default function Home() {
             </CardImg>
             <Card.Content clr='#CC0A9C'>
               <p>Luanna Helena</p>
-              <IconContext.Provider value={{color: '#f4f4f4', size: '1.5rem'}}>
+              <IconContext.Provider value={{color: '#FCFCFC', size: '1.5rem'}}>
                 <Icons>
                   <NextLink href="https://www.behance.net/luannahelena" passHref>
                     <a target="_blank">
@@ -340,7 +360,7 @@ export default function Home() {
             </CardImg>
             <Card.Content clr='#740F99'>
               <p>Julia Fontoura</p>
-              <IconContext.Provider value={{color: '#f4f4f4', size: '1.5rem'}}>
+              <IconContext.Provider value={{color: '#FCFCFC', size: '1.5rem'}}>
                 <Icons>
                   <NextLink href="https://www.behance.net/juliafontoura" passHref>
                     <a target="_blank">
@@ -371,7 +391,7 @@ export default function Home() {
             </CardImg>
             <Card.Content clr='#FAB319'>
               <p>Julya Neves</p>
-              <IconContext.Provider value={{color: '#f4f4f4', size: '1.5rem'}}>
+              <IconContext.Provider value={{color: '#FCFCFC', size: '1.5rem'}}>
                 <Icons>
                   <NextLink href="https://www.behance.net/julyaneves" passHref>
                     <a target="_blank">
@@ -402,7 +422,7 @@ export default function Home() {
             </CardImg>
             <Card.Content clr='#CC0A9C'>
               <p>Rodrigo Melhado</p>
-              <IconContext.Provider value={{color: '#f4f4f4', size: '1.5rem'}}>
+              <IconContext.Provider value={{color: '#FCFCFC', size: '1.5rem'}}>
                 <Icons>
                   <NextLink href="https://www.behance.net/rod_melhado" passHref>
                     <a target="_blank">
@@ -429,179 +449,12 @@ export default function Home() {
         </Cards>
       </Section3>
 
+      <section>
+        <img src={Maos}/>
+      </section>
 
-
-      {/* <section class="s1">
-
-        <div class="delimitador">
-            <div class="logo">
-                <img src="img/logo-branco.svg" width="156.54" height="50" />
-            </div>
-            <div class="delimitador-500 conheca">
-                <h1 class="text-white text-center">Conheça nosso projeto <br/> completo no Behance</h1>
-                <p class="text-white text-center">Projeto de conclusão do Curso Técnico de Multimídia da Escola SENAI de
-                    Informática no primeiro semestre de 2021</p>
-                <div class="buttom-geral b1 extrabold text-white m-auto">
-                    <p>Ir para o Projeto</p>
-                </div>
-            </div>
-        </div>
-        <img class="menina1" src="img/primeira-guria.svg" alt=""/>
-    </section>
-
-    <section class="s2">
-        <div class="delimitador">
-            <div class="delimitador-500">
-                <p class="azul-verde text-center pt-5">O conecta as minas é uma plataforma de orientação vocacional, que
-                    auxilia meninas
-                    a
-                    desenvolver confiança e autoconhecimento – através de testes e desafios – com o intuito de recuperar
-                    o
-                    interesse na tecnologia, que foi perdido durante os anos.</p>
-                <h1 class="roxo text-center pt-4 pb-3">Quer saber mais? </h1>
-                <div class="row delimitador-350">
-                    <div class="buttom-geral b2 col-xs-6 col-md-6 col-lg-6 extrabold text-white m-auto">
-                        <p>Acesse o protótipo</p>
-                    </div>
-                    <div class="buttom-geral b3 col-xs-6 col-md-6 col-lg-6 extrabold text-white m-auto">
-                        <p>Acesse o projeto</p>
-                    </div>
-                </div>
-
-                <h2 class="citacao azul-verde bold italic pt-5 text-right">“Quem idealizou <br/>esse projeto?”</h2>
-            </div>
-
-            <div class="delimitador">
-                <div class="row quem">
-                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 mb-4">
-                        <div class="m-auto perfil "><img src="img/daniel.webp" alt="" class="foto-perfil"/></div>
-                        <div class="m-auto caixa-integrantes bg-roxo">
-                            <p class="nome text-white pt-3">Daniel Felipe</p>
-                            <p class="redes text-white"><i class="fab fa-behance"></i><i
-                                    class="fab fa-linkedin-in"></i><i class="fab fa-instagram"></i><i
-                                    class="far fa-envelope"></i></p>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 mb-4">
-                        <div class="m-auto perfil "><img src="img/giovanna.webp" alt="" class="foto-perfil"/></div>
-                        <div class="m-auto caixa-integrantes bg-amarelo">
-                            <p class="nome text-white  pt-3">Giovanna Mariana</p>
-                            <p class="redes text-white"><i class="fab fa-behance"></i><i
-                                    class="fab fa-linkedin-in"></i><i class="fab fa-instagram"></i><i
-                                    class="far fa-envelope"></i></p>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 mb-4">
-                            <div class="m-auto perfil "><img src="img/luanna.webp" alt="" class="foto-perfil"/></div>
-                            <div class="m-auto caixa-integrantes bg-rosa">
-                                <p class="nome text-white pt-3">Luanna Helena</p>
-                                <p class="redes text-white"><i class="fab fa-behance"></i><i
-                                        class="fab fa-linkedin-in"></i><i class="fab fa-instagram"></i><i
-                                        class="far fa-envelope"></i></p>
-                            </div>
-                    </div>
-
-                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 mb-4">
-                        <div class="m-auto perfil "><img src="img/julia.webp" alt="" class="foto-perfil"/></div>
-                        <div class="m-auto caixa-integrantes bg-roxo">
-                            <p class="nome text-white pt-3">Julia Fontoura</p>
-                            <p class="redes text-white"><i class="fab fa-behance"></i><i
-                                    class="fab fa-linkedin-in"></i><i class="fab fa-instagram"></i><i
-                                    class="far fa-envelope"></i></p>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 mb-4">
-                        <div class="m-auto perfil "><img src="img/julya.webp" alt="" class="foto-perfil"/></div>
-                        <div class="m-auto caixa-integrantes bg-amarelo">
-                            <p class="nome text-white  pt-3">Julya Neves</p>
-                            <p class="redes text-white"><i class="fab fa-behance"></i><i
-                                    class="fab fa-linkedin-in"></i><i class="fab fa-instagram"></i><i
-                                    class="far fa-envelope"></i></p>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 mb-4">
-                            <div class="m-auto perfil "><img src="img/rodrigo.jfif" alt="" class="foto-perfil"/></div>
-                            <div class="m-auto caixa-integrantes bg-rosa">
-                                <p class="nome text-white pt-3">Rodrigo Melhado</p>
-                                <p class="redes text-white"><i class="fab fa-behance"></i><i
-                                        class="fab fa-linkedin-in"></i><i class="fab fa-instagram"></i><i
-                                        class="far fa-envelope"></i></p>
-                            </div>
-                    </div>
-
-                    <div class="text-center col-xs-12 col-md-12 col-lg-12 mt-10 mb-10">
-
-                        <img class="text-center" src="img/maos.svg" alt=""/>
-                    </div>
-                </div>
-
-                
-
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p class="azul-verde text-center rodape extrabold">© 2021 conecta as minas</p>
-    </footer> */}
-
-      {/* <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
     </div>
+    <Footer>© 2021 conecta as minas</Footer>
+  </div>
   )
 }
