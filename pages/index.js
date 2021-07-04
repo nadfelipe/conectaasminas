@@ -91,7 +91,7 @@ Landing.Textos = styled.div`
 `;
 
 const Section2 = styled.section`
-  padding: 2rem;
+  padding: 1rem 2em;
   width: 100vw;
   height: 50vh;
   display: flex;
@@ -100,9 +100,11 @@ const Section2 = styled.section`
   align-items: center;
   background-color: #FCFCFC;
   p{
+    margin-top: 4em;
     width: 60%;
     text-align: center;
     color: #15B4C2;
+    font-size: 1.2rem;
   }
 `;
 
@@ -208,11 +210,21 @@ const Icons = styled.div`
   cursor: pointer;
 `;
 
+const Section4 = styled.div`
+  background-color: #FCFCFC;
+  padding: 2rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  img{
+    width: 30%;
+  }
+`;
 
 
 const Footer = styled.footer`
-  margin-top: 4em;
   font-family: 'Epilogue', sans-serif;
   background-color: #f4f4f4;
   height: 50px;
@@ -367,7 +379,7 @@ export default function Home() {
                       <FaBehance/>
                     </a>
                   </NextLink>
-                  <NextLink href="https://www.linkedin.com/in/julia-fontoura/" passHref>
+                  <NextLink href="https://www.linkedin.com/in/julia-fontoura-14603a190/" passHref>
                     <a target="_blank">
                     <FaLinkedinIn/>
                     </a>
@@ -449,9 +461,9 @@ export default function Home() {
         </Cards>
       </Section3>
 
-      <section>
+      <Section4>
         <img src={Maos}/>
-      </section>
+      </Section4>
 
     </div>
     <Footer>© 2021 conecta as minas</Footer>
