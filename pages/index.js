@@ -80,6 +80,40 @@ const LandingTextos = styled.div`
   }}
 `;
 
+const Section2 = styled.section`
+  padding: 2rem;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  p{
+    width: 60%;
+    text-align: center;
+    color: #15B4C2;
+  }
+`;
+
+const Section2Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  h2{
+    color: #740F99;
+    font-weight: 700;
+  }
+
+  div{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+  }
+`;
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -95,20 +129,21 @@ export default function Home() {
             <h1>Projeto de conclusão do Curso Técnico de Multimídia da Escola SENAI de Informática no primeiro semestre de 2021</h1>
             <p>Conheça nosso projeto completo no Behance</p>
           </LandingTextos>
-          <Link href={"https://google.com"} target="_blank">Ir para o projeto</Link>
+          <Link href={"https://google.com"} target="_blank" grd='
+  114.14deg, #740F99 45.88%, #15B4C2 251.47%'>Ir para o projeto</Link>
         </LandingContent>
       </Landing>
 
-      <section>
-        <div>
+      <Section2>
+        <Section2Content>
           <h2>Quer saber mais?</h2>
           <div>
-            <Link href={"https://google.com"} target="_blank">Acesse o protótipo</Link>
-            <Link href={"https://google.com"} target="_blank">Acesse o projeto</Link>
+            <Link href={"https://google.com"} target="_blank" grd='260.64deg, #CC0A9C -29.89%, #740F99 126.84%'>Acesse o protótipo</Link>
+            <Link href={"https://google.com"} target="_blank" grd='278.73deg, #FAB319 -43.97%, #CC0A9C 113.91%'>Acesse o projeto</Link>
           </div>
-        </div>
+        </Section2Content>
         <p>O conecta as minas é uma plataforma de orientação vocacional, que auxilia meninas a desenvolver confiança e autoconhecimento – através de testes e desafios – com o intuito de recuperar o interesse na tecnologia, que foi perdido durante os anos.</p>
-      </section>
+      </Section2>
 
 
 
