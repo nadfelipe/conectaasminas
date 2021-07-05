@@ -10,6 +10,12 @@ const LinkStyle = styled.a`
   text-align: center;
   color: #f4f4f4;
   font-weight: 800;
+  font-size: 1rem;
+  @media(max-width: 500px){
+    width: 7.3rem;
+    font-size: 0.7rem;
+    padding: 0.5rem 0.4rem;
+  }
 `;
 
 

@@ -106,6 +106,13 @@ const Section2 = styled.section`
     color: #15B4C2;
     font-size: 1.2rem;
   }
+  @media(max-width: 500px){
+    p{
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      width: 100%;
+    }
+  }
 `;
 
 Section2.Content = styled.div`
@@ -113,16 +120,21 @@ Section2.Content = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-
   h2{
     color: #740F99;
     font-weight: 700;
   }
-
   div{
     display: flex;
     justify-content: space-around;
     width: 40%;
+  }
+  @media(max-width: 500px){
+    div{
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
   }
 `;
 
@@ -140,11 +152,18 @@ const Section3 = styled.section`
     color: #15B4C2;
     font-weight: 700;
     font-style: italic;
+    font-size: 1.5rem;
+  }
+  @media(max-width: 500px){
+    h2{
+      font-size: 1.3rem;
+      text-align: center;
+    }
   }
 `;
 
 const Cards = styled.div`
-  width: 60%;
+  max-width: 60%;
   height: 60%;
   display: flex;
   flex-wrap: wrap;
@@ -201,6 +220,12 @@ Card.Content = styled.div`
     color: #FCFCFC;
     font-size: 1.3rem;
   }
+  @media(max-width: 500px){
+    p{
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+  }
 `;
 
 const Icons = styled.div`
@@ -220,6 +245,11 @@ const Section4 = styled.div`
 
   img{
     width: 30%;
+  }
+  @media(max-width: 500px){
+    img{
+      width: 100%;
+    }
   }
 `;
 
@@ -279,7 +309,7 @@ export default function Home() {
             </CardImg>
             <Card.Content clr='#740F99'>
               <p>Daniel Felipe</p>
-              <IconContext.Provider value={{color: '#FCFCFC', size: '1.5rem'}}>
+              <IconContext.Provider value={{color: '#FCFCFC', size: '1.2rem'}}>
                 <Icons>
                   <NextLink href="https://www.behance.net/danelfelip" passHref>
                     <a target="_blank">
@@ -310,7 +340,7 @@ export default function Home() {
             </CardImg>
             <Card.Content clr='#FAB319'>
               <p>Giovanna Maria</p>
-              <IconContext.Provider value={{color: '#FCFCFC', size: '1.5rem'}}>
+              <IconContext.Provider value={{color: '#FCFCFC', size: '1.2rem'}}>
                 <Icons>
                   <NextLink href="https://www.behance.net/giovannamaria6" passHref>
                     <a target="_blank">
@@ -341,7 +371,7 @@ export default function Home() {
             </CardImg>
             <Card.Content clr='#CC0A9C'>
               <p>Luanna Helena</p>
-              <IconContext.Provider value={{color: '#FCFCFC', size: '1.5rem'}}>
+              <IconContext.Provider value={{color: '#FCFCFC', size: '1.2rem'}}>
                 <Icons>
                   <NextLink href="https://www.behance.net/luannahelena" passHref>
                     <a target="_blank">
@@ -372,7 +402,7 @@ export default function Home() {
             </CardImg>
             <Card.Content clr='#740F99'>
               <p>Julia Fontoura</p>
-              <IconContext.Provider value={{color: '#FCFCFC', size: '1.5rem'}}>
+              <IconContext.Provider value={{color: '#FCFCFC', size: '1.2rem'}}>
                 <Icons>
                   <NextLink href="https://www.behance.net/juliafontoura" passHref>
                     <a target="_blank">
@@ -403,7 +433,7 @@ export default function Home() {
             </CardImg>
             <Card.Content clr='#FAB319'>
               <p>Julya Neves</p>
-              <IconContext.Provider value={{color: '#FCFCFC', size: '1.5rem'}}>
+              <IconContext.Provider value={{color: '#FCFCFC', size: '1.2rem'}}>
                 <Icons>
                   <NextLink href="https://www.behance.net/julyaneves" passHref>
                     <a target="_blank">
@@ -434,7 +464,7 @@ export default function Home() {
             </CardImg>
             <Card.Content clr='#CC0A9C'>
               <p>Rodrigo Melhado</p>
-              <IconContext.Provider value={{color: '#FCFCFC', size: '1.5rem'}}>
+              <IconContext.Provider value={{color: '#FCFCFC', size: '1.2rem'}}>
                 <Icons>
                   <NextLink href="https://www.behance.net/rod_melhado" passHref>
                     <a target="_blank">
