@@ -283,7 +283,7 @@ export default function Home() {
             <h1>Projeto de conclusão do Curso Técnico de Multimídia da Escola SENAI de Informática no primeiro semestre de 2021</h1>
             <p>Conheça nosso projeto completo no Behance</p>
           </Landing.Textos>
-          <Link href={"https://google.com"} target="_blank" grd='
+          <Link href={"https://www.behance.net/gallery/122827485/Conecta-as-Minas"} target="_blank" grd='
   114.14deg, #740F99 45.88%, #15B4C2 251.47%'>Ir para o projeto</Link>
         </Landing.Content>
       </Landing>
@@ -292,8 +292,8 @@ export default function Home() {
         <Section2.Content>
           <h2>Quer saber mais?</h2>
           <div>
-            <Link href={"https://google.com"} target="_blank" grd='260.64deg, #CC0A9C -29.89%, #740F99 126.84%'>Acesse o protótipo</Link>
-            <Link href={"https://google.com"} target="_blank" grd='278.73deg, #FAB319 -43.97%, #CC0A9C 113.91%'>Acesse o projeto</Link>
+            <Link href={"https://www.figma.com/proto/TjcLxIrHJNePcD2m3diK0q/Grupo-2-ODS5?page-id=244%3A17&node-id=532%3A8321&viewport=220%2C278%2C0.20651789009571075&scaling=scale-down"} target="_blank" grd='260.64deg, #CC0A9C -29.89%, #740F99 126.84%'>Acesse o protótipo</Link>
+            <Link href={"https://www.behance.net/gallery/122827485/Conecta-as-Minas"} target="_blank" grd='278.73deg, #FAB319 -43.97%, #CC0A9C 113.91%'>Acesse o projeto</Link>
           </div>
         </Section2.Content>
         <p>O conecta as minas é uma plataforma de orientação vocacional, que auxilia meninas a desenvolver confiança e autoconhecimento – através de testes e desafios – com o intuito de recuperar o interesse na tecnologia, que foi perdido durante os anos.</p>
