@@ -124,16 +124,27 @@ Section2.Content = styled.div`
     color: #740F99;
     font-weight: 700;
   }
-  div{
-    display: flex;
-    justify-content: space-around;
-    width: 40%;
-  }
   @media(max-width: 500px){
     div{
       display: flex;
       justify-content: space-around;
       width: 100%;
+    }
+  }
+`;
+
+Section2.Links = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  @media(max-width: 500px){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 1em;
+    a{
+      margin: 1em 0 0 0;
     }
   }
 `;
@@ -158,6 +169,13 @@ const Section3 = styled.section`
     h2{
       font-size: 1.3rem;
       text-align: center;
+    }  
+    @media(max-width: 414px){
+      background: url("https://cdn.discordapp.com/attachments/315943804567945216/866854063545778176/Group_192.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center right 70%;
+
     }
   }
 `;
@@ -291,10 +309,11 @@ export default function Home() {
       <Section2>
         <Section2.Content>
           <h2>Quer saber mais?</h2>
-          <div>
+          <Section2.Links>
             <Link href={"https://www.figma.com/proto/TjcLxIrHJNePcD2m3diK0q/Grupo-2-ODS5?page-id=244%3A17&node-id=532%3A8321&viewport=220%2C278%2C0.20651789009571075&scaling=scale-down"} target="_blank" grd='260.64deg, #CC0A9C -29.89%, #740F99 126.84%'>Acesse o protótipo</Link>
+            <Link href={"https://www.youtube.com/watch?v=TdC6irj6Sm0"} target="_blank" grd='278.73deg, #FAB319 -43.97%, #CC0A9C 113.91%'>Acesse o vídeo</Link>
             <Link href={"https://www.behance.net/gallery/122827485/Conecta-as-Minas"} target="_blank" grd='278.73deg, #FAB319 -43.97%, #CC0A9C 113.91%'>Acesse o projeto</Link>
-          </div>
+          </Section2.Links>
         </Section2.Content>
         <p>O conecta as minas é uma plataforma de orientação vocacional, que auxilia meninas a desenvolver confiança e autoconhecimento – através de testes e desafios – com o intuito de recuperar o interesse na tecnologia, que foi perdido durante os anos.</p>
       </Section2>
