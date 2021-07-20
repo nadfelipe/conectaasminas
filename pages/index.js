@@ -312,7 +312,7 @@ export default function Home() {
           <Section2.Links>
             <Link href={"https://www.figma.com/proto/TjcLxIrHJNePcD2m3diK0q/Grupo-2-ODS5?page-id=244%3A17&node-id=532%3A8321&viewport=220%2C278%2C0.20651789009571075&scaling=scale-down"} target="_blank" grd='260.64deg, #CC0A9C -29.89%, #740F99 126.84%'>Acesse o protótipo</Link>
             <Link href={"https://youtu.be/TdC6irj6Sm0"} target="_blank" grd='278.73deg, #FAB319 -43.97%, #CC0A9C 113.91%'>Acesse o vídeo</Link>
-            <Link href={"https://www.behance.net/gallery/122827485/Conecta-as-Minas"} target="_blank" grd='278.73deg, #FAB319 -43.97%, #CC0A9C 113.91%'>Acesse o projeto</Link>
+            <Link href={"https://www.behance.net/gallery/122827485/Conecta-as-Minas"} target="_blank" grd='260.64deg, #D3218B -29.89%, #B70C9C 126.84%'>Acesse o projeto</Link>
           </Section2.Links>
         </Section2.Content>
         <p>O conecta as minas é uma plataforma de orientação vocacional, que auxilia meninas a desenvolver confiança e autoconhecimento – através de testes e desafios – com o intuito de recuperar o interesse na tecnologia, que foi perdido durante os anos.</p>
